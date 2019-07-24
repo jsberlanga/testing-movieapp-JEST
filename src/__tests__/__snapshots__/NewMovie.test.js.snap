@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewMovie /> MovieForm snapshot 1`] = `
+<form
+  data-testid="movie-form"
+>
+  <input
+    aria-label="text-input"
+    type="text"
+    value=""
+  />
+  <button
+    type="submit"
+  >
+    Submit
+  </button>
+</form>
+`;
