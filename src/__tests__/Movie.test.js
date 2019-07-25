@@ -35,7 +35,7 @@ describe("<Movie />", () => {
         <Movie movie={movie} />
       </BrowserRouter>
     );
-    debug();
+    // debug();
     // by default this would show an error because we are not clearing
     // console.error = jest.fn(); to solve this problem we need to
     // include a statement in afterEach to clear the mock function console.error
