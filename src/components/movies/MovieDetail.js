@@ -9,19 +9,22 @@ const BACKDROP_PATH = "http://image.tmdb.org/t/p/w1280";
 
 class MovieDetail extends Component {
   state = {
-    movie: {}
+    movie: {},
+    loading: false
   };
 
   async componentDidMount() {
     try {
+      this.setState({ loading: true });
       const res = await fetch(
         `https://api.themoviedb.org/3/movie/${
           this.props.match.params.id
-        }?api_key=hi&language=en-US`
+        }?api_key=f3f11ab7d4e72ba405b3cec786ed716f&language=en-US`
       );
       const movie = await res.json();
       this.setState({
-        movie
+        movie,
+        loading: false
       });
     } catch (e) {
       console.log(e);
@@ -29,8 +32,9 @@ class MovieDetail extends Component {
   }
 
   render() {
-    const { movie } = this.state;
+    const { movie, loading } = this.state;
     if (!movie) return null;
+    if (loading) return <p style={{ color: "white" }}>Loading...</p>;
     return (
       <MovieWrapper backdrop={`${BACKDROP_PATH}${movie.backdrop_path}`}>
         <MovieInfo>

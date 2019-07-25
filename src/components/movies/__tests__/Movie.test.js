@@ -24,7 +24,7 @@ describe("<Movie />", () => {
 
   const movie = {
     title: "qwerty",
-    id: "123",
+    id: 123,
     poster_path: "123qwe.jpg"
   };
 

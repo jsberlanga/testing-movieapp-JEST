@@ -16,8 +16,8 @@ global.fetch = require("jest-fetch-mock");
 
 const movies = {
   results: [
-    { title: "some title", id: "stringid", poster_path: "poster.jpg" },
-    { title: "sasdase2", id: "strinasdadgid", poster_path: "postasdasder.jpg" }
+    { title: "some title", id: 1234, poster_path: "poster.jpg" },
+    { title: "sasdase2", id: 12345, poster_path: "postasdasder.jpg" }
   ]
 };
 
