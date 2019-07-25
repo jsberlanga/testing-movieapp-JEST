@@ -17,8 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --watchAll",
-    "test:files": "react-scripts test  --env=jsdom --setupFiles ./src/setupTests.js  --setupTestFrameworkScriptFile=raf/polyfill",
-    "test:coverage": "react-scripts test --setupFiles ./src/setupTests.js --env=jsdom --coverage",
+    "test:coverage": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
@@ -28,5 +27,22 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
     "react-testing-library": "^4.1.7"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/src/**/*.js",
+      "!**/src/index.js",
+      "!**/src/registerServiceWorker.js",
+      "!**/__tests__/**",
+      "!**/node_modules/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
   }
 }

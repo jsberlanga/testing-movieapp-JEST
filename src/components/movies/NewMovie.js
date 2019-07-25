@@ -3,7 +3,7 @@ import MovieForm from "./MovieForm";
 
 export default class NewMovie extends Component {
   onSubmitForm = text => {
-    console.log("text");
+    console.log(text);
   };
   render() {
     return (
